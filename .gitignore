@@ -1,0 +1,11 @@
+.[oa]
+~
+/raw_data/*
+/sql_data/*
+/old/*
+/scripts_queries/*.txt
+/www/*
+/conf_files/*
+/conf_files
+/raw_data
+/www
