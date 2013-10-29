@@ -8,10 +8,10 @@ while (my $line = <>) {
 
  my $isbn = $line;
 
-my $ds = "DBI:mysql:biblioteca:localhost";
-my $user_sql = "hugo";
-my $passwd = "pimiento+34";
-my $dbh = DBI->connect($ds,$user_sql,$passwd) || die "Can't connect!"; 
+my $ds = "DBI:mysql:library:localhost";
+my $user;
+my $password;
+my $dbh = DBI->connect($ds.";mysql_read_default_file=$ENV{HOME}/.my.cnf", $user, $password) || die "Can't connect!"; 
 
 my $sth_libro_id = $dbh->prepare("SELECT libro_id FROM libro WHERE ISBN_13 LIKE ?");
 $sth_libro_id->execute ($isbn);
