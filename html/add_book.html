@@ -1,0 +1,41 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Translational//EN"
+"http://www.w3.org/TR/html14/loose.dtd">
+
+<head>
+<meta charset="UTF-8">
+<title>New entry</title>
+</head>
+<body>
+<h1>Add new books or users</h1>
+<p>
+To add a new book please, complete the following form and click 'add book'(obligatory fields are marked with *, but it is recommend to fulfil all fields):
+</p>
+<form action="../cgi-bin/add_book.pl" method="get">
+<p>
+Book title: <input type="text" name="title"/>*<br/>
+Publication year: <input type="text" name="pub_year" />*<br />
+Authors: <input type="text" name="author" /><br />
+Publisher: <input type="text" name="pub" /><br />
+ISBN 10: <input type="text" name="isbn_10" /><br />
+ISBN 13: <input type="text" name="isbn_13" /><br />
+Order year: <input type="text" name="order" />*<br />
+<input type="submit" value="Add book" />
+<input type="reset" value="clear"/><br />
+</p>
+</form>
+To add a new user please, complete the following form and click 'add user':</p>
+<form action="../cgi-bin/add_user.pl" method="get">
+<p>
+User name: <input type="text" name="name" />* Name and family name needed<br />
+Mail: <input type="text" name="mail" /><br />
+office_tlf: <input type="text" name="tlf" /><br />
+Location: <input type="text" name="local" /><br />
+<input type="submit" value="Add user" />
+<input type="reset" value="clear"/><br />
+</p>
+</form>
+<a href ="../library/index.html"> Go to home page</a>
+</p>
+</p>
+</body>
+</html>
