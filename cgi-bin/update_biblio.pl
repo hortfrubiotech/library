@@ -66,6 +66,7 @@ $sth_insert->execute($user_id, $book_id); # Create a new entry in the biblio tab
 print "You create a new entry, now the book: $book is under the custody of: $user.\n"; ##If book title doesn't match the book is also submited to the DB.
 } 
 
+print $cgi->p(a({ href => '../cgi-bin/form_update_biblio.pl'}, 'Go back to the update page'));
 print $cgi->p(a({ href => '../library/index.html'}, 'Go to home page'));
 
 

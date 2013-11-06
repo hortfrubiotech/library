@@ -44,7 +44,7 @@ while (my @id= $sth->fetchrow_array()){
 }
 }
 #Show results in a table. 
-·print $cgi->table(
+print $cgi->table(
 { -border => '1', cellpadding => '3', cellspacing=> '3' },
 $cgi->Tr([
     $cgi->th([

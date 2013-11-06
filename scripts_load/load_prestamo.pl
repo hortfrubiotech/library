@@ -44,10 +44,10 @@ my @data = split ("\t", $line);#obtiene el libro y el usuario de la tabla y los 
 
 }
 my $ds = "DBI:mysql:library:localhost";
-my $user_sql = "biblio";
-my $passwd = "mel0CoToN+58";
-my $dbh = DBI->connect($ds,$user_sql,$passwd) || die "Can't connect!"; 
-
+my $user_sql;
+my $password;
+my $dbh = DBI->connect($ds. ";mysql_read_default_file=/home/.my.cnf",
+                $user_sql, $password) || die "Can't connect!";
 
 my $sth_libro = $dbh->prepare("SELECT libro_id FROM libro WHERE $book_field LIKE ?"); 
    $sth_libro->execute ($book);
